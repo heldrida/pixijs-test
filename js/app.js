@@ -18,6 +18,9 @@
 
 		skull.rotation += 0.01;
 
+		skull.scale.x += 0.001;
+		skull.scale.y += 0.001;
+
 		// render the `stage` instance
 		renderer.render(stage);
 
