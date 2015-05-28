@@ -16,7 +16,7 @@
 
 		requestAnimationFrame(animate);
 
-		skull.rotation += 0.1;
+		skull.rotation += 0.01;
 
 		// render the `stage` instance
 		renderer.render(stage);
@@ -32,6 +32,10 @@
 	// center the sprite anchor point
 	skull.anchor.x = 0.5;
 	skull.anchor.y = 0.5;
+
+	// move the psirce to the center of the render view
+	skull.position.x = 200;
+	skull.position.y = 150;
 
 	stage.addChild(skull);
 
