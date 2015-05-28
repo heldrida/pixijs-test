@@ -42,6 +42,7 @@
 
 	stage.addChild(skull);
 
+	/*
 	// events
 	skull.setInteractive(true);
 
@@ -50,5 +51,6 @@
 		alert(1);
 
 	}
-
+	*/
+	
 }());
