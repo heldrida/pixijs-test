@@ -45,9 +45,30 @@
 	// events
 	skull.interactive = true;
 
-	skull.on('click', function () {
-		skull.scale.x -= 0.5;
-		skull.scale.y -= 0.5;
-	});
+	skull.buttonMode = true;
+
+	skull
+		.on('click', function () {
+			skull.scale.x -= 0.5;
+			skull.scale.y -= 0.5;
+		})
+		.on('mousedown', function (event) {
+			this.data = event.data; // save the touch movement data
+			this.alpha = 0.5;
+			this.dragging = true;			
+		})
+		.on('mousemove', function () {
+			if (this.dragging) {
+				var position = this.data.getLocalPosition(this.parent);
+				this.position.x = position.x;
+				this.position.y = position.y;
+			}
+		})
+		.on('mouseup', function () {
+			this.alpha = 1;
+			this.dragging = false;
+			this.data = null;
+		});
+
 	
 }());
