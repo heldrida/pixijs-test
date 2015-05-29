@@ -42,15 +42,12 @@
 
 	stage.addChild(skull);
 
-	/*
 	// events
-	skull.setInteractive(true);
+	skull.interactive = true;
 
-	skull.click = function () {
-
-		alert(1);
-
-	}
-	*/
+	skull.on('click', function () {
+		skull.scale.x -= 0.5;
+		skull.scale.y -= 0.5;
+	});
 	
 }());
