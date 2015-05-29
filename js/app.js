@@ -2,7 +2,7 @@
 
 	// renderer instance
 	// the `autoDetectRenderer` checks if WebGL is available or fallback canvas
-	var renderer = PIXI.autoDetectRenderer(400, 300),
+	var renderer = PIXI.autoDetectRenderer(400, 300, {backgroundColor : 0x1099bb}),
 
 	// create pixi stage
 	stage = new PIXI.Container();
